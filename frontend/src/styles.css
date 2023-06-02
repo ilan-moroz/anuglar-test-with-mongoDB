@@ -1,0 +1,13 @@
+/* style for all the h1 and h2 */
+h1 {
+  font-size: 70px;
+  font-weight: 600;
+  font-family: "Niconne", cursive;
+  color: rgb(64, 133, 88);
+  text-shadow: 2px 2px 0px #87ad7d, 4px 4px 0px #ee4b2b, 6px 6px 0px #00c2cb,
+    8px 8px 0px #ff7f50, 10px 10px 0px #553c9a;
+}
+
+h2 {
+  color: rgb(64, 133, 88);
+}

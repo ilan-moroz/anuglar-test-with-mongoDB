@@ -1,0 +1,36 @@
+<div>
+  <br /><br />
+  <!-- inputs for adding new action to database -->
+  <label for="accountNumber">Bank Account Number: </label>
+  <input type="number" [(ngModel)]="accountNumber" /><br /><br />
+  <label for="select_action">Choose your action</label>
+  <select id="select" name="select_action" [(ngModel)]="action">
+    <option value="withdraw">Withdraw</option>
+    <option value="deposit">Deposit</option>
+    <option value="loan">Loan</option>
+  </select>
+  <br /><br />
+  <!-- conditional rendering that depends on the action -->
+  <h2 *ngIf="action">{{ action }}</h2>
+  <div
+    class="withdraw_deposit"
+    *ngIf="action === 'withdraw' || action === 'deposit'"
+  >
+    <label for="amount">Amount: </label>
+    <input type="number" [(ngModel)]="amount" />
+  </div>
+  <br />
+  <div class="loan" *ngIf="action === 'loan'">
+    <label for="amount">Amount: </label>
+    <input type="number" [(ngModel)]="amount" /><br /><br />
+    <label for="payments">Payments: </label>
+    <input type="number" [(ngModel)]="payments" /><br /><br />
+    <label for="amount">Interest: </label>
+    <input type="number" [(ngModel)]="interest" />
+  </div>
+  <br /><br />
+  <!-- submit button and onClick run onSub Function -->
+  <button type="button" class="btn btn-success" (click)="onSub()">
+    Submit
+  </button>
+</div>

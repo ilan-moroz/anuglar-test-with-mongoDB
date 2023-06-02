@@ -1,0 +1,17 @@
+<div style="text-align: center">
+  <h1>$$ Ilan Moroz Bank $$</h1>
+  <router-outlet></router-outlet>
+  <br />
+  <br />
+  <br />
+  <a
+    routerLink="/"
+    [routerLinkActive]="['active']"
+    [routerLinkActiveOptions]="{ exact: true }"
+    >Bank Account</a
+  >
+  |
+  <a routerLink="/AccountActions" [routerLinkActive]="['active']"
+    >Make Action in Account</a
+  >
+</div>
