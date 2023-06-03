@@ -27,7 +27,7 @@ export class MainComponent implements OnInit {
     this.bankService.getBankActions(this.bankAccountNumber).subscribe(
       (response) => {
         console.log(response);
-        this.accountActions = response;
+        this.accountActions = [response];
         console.log(this.accountActions);
         // reset the input after submit
         this.bankAccountNumber = 0;

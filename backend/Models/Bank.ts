@@ -1,7 +1,7 @@
 import { Document, model, Schema } from "mongoose";
 
 export interface Operation extends Document {
-  type: "Deposit" | "withdraw" | "Loan";
+  type: "deposit" | "withdraw" | "loan";
   amount: number;
   payments?: number;
   interest?: number;
@@ -16,7 +16,7 @@ export interface BankAccount extends Document {
 const OperationSchema = new Schema<Operation>({
   type: {
     type: String,
-    enum: ["Deposit", "withdraw", "Loan"],
+    enum: ["deposit", "withdraw", "loan"],
     required: true,
   },
   amount: { type: Number, required: true },
